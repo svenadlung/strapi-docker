@@ -1,0 +1,5 @@
+**/.DS_Store
+.git*
+/.env
+/.idea
+/README.md
