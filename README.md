@@ -1,3 +1,8 @@
-# Install
+# Strapi docker boilerplate using MongoDB
 
-docker-compose up -d
+### Install
+
+First start takes some time to initialize, take a cup of ☕️ and relax.
+
+- docker-compose up
+
