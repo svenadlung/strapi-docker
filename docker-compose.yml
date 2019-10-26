@@ -7,7 +7,7 @@ services:
     volumes:
       - './db/:/data/db'
   api:
-    image: strapi/strapi
+    image: strapi/strapi:3.0.0-beta.17.4
     environment:
       - APP_NAME=api
       - DATABASE_CLIENT=mongo
@@ -15,11 +15,13 @@ services:
       - DATABASE_PORT=27017
       - DATABASE_NAME=strapi
     volumes:
-      - './api:/usr/src/api/api'
+      - './api:/srv/app'
     links:
       - 'db:mongo'
     ports:
-    - '1337:1337'
+      - '1337:1337'
+    depends_on:
+      - db
 volumes:
   db:
   api:
